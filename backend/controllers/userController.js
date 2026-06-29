@@ -51,7 +51,9 @@ const loginUser = async (req, res) => {
     console.log("====================================");
     console.log("LOGIN REQUEST");
     console.log("JWT_SECRET =", process.env.JWT_SECRET);
-
+    console.log("===== LOGIN FUNCTION =====");
+console.log("JWT_SECRET =", process.env.JWT_SECRET);
+console.log("__filename =", __filename);
     const { email, password } = req.body;
 
     console.log("Email:", email);
