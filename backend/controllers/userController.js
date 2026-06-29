@@ -85,14 +85,13 @@ console.log("__filename =", __filename);
 
     console.log("✅ Password Matched");
 
-    if (!process.env.JWT_SECRET) {
-      console.log("❌ JWT_SECRET is Missing");
-
-      return res.status(500).json({
-        message: "JWT_SECRET is Missing",
-      });
-    }
-
+    const token = jwt.sign(
+  { id: user._id },
+  process.env.JWT_SECRET,
+  {
+    expiresIn: "7d",
+  }
+);
     console.log("Generating JWT...");
 
     const token = jwt.sign(

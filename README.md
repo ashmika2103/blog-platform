@@ -12,7 +12,7 @@ A full-stack blog platform built using the MERN stack where users can register, 
 
 ### Backend API
 
-**https://my-blog-8xl3.onrender.com**
+**https://blog-platform-oexy.onrender.com**
 
 ---
 
@@ -143,7 +143,7 @@ https://blog-platform-web-frontend.vercel.app
 
 Render
 
-https://my-blog-8xl3.onrender.com
+https://blog-platform-oexy.onrender.com
 
 ### Database
 
