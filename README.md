@@ -1,34 +1,47 @@
-# Blog Platform
+# Blog Platform with Comments
 
-A full-stack blog platform built using the MERN stack where users can register, log in, create blog posts, edit or delete their own posts, and interact through comments. This project demonstrates user authentication, RESTful APIs, MongoDB integration, and responsive frontend development.
+A full-stack blogging platform built using the MERN stack where users can register, log in, create blog posts, edit or delete their own posts, and interact through comments.
 
 ---
 
 ## Live Demo
 
-### Frontend
+**Frontend:**
+https://blog-platform-lac-five.vercel.app
 
-**https://blog-platform-web-frontend.vercel.app**
+**Backend API:**
+https://blog-platform-oexy.onrender.com
 
-### Backend API
-
-**https://blog-platform-oexy.onrender.com**
+**GitHub Repository:**
+https://github.com/ashmika2103/blog-platform
 
 ---
 
 ## Features
 
+### User Authentication
+
 * User Registration
-* User Login with JWT Authentication
+* User Login
+* JWT Authentication
+* Password Encryption using bcrypt
+
+### Blog Management
+
 * Create Blog Posts
+* View All Blog Posts
 * Edit Blog Posts
 * Delete Blog Posts
-* View All Blog Posts
-* View Individual Blog Details
-* Comment System
-* Responsive User Interface
-* MongoDB Atlas Database Integration
-* RESTful API Architecture
+
+### Comments
+
+* Add Comments
+* View Comments for Each Post
+
+### Responsive UI
+
+* Clean and simple interface
+* Easy navigation
 
 ---
 
@@ -39,18 +52,27 @@ A full-stack blog platform built using the MERN stack where users can register, 
 * React.js
 * React Router DOM
 * Axios
-* CSS
 
 ### Backend
 
 * Node.js
 * Express.js
+
+### Database
+
 * MongoDB Atlas
 * Mongoose
-* JWT (JSON Web Token)
-* bcryptjs
-* CORS
-* dotenv
+
+### Authentication
+
+* JSON Web Token (JWT)
+* bcrypt.js
+
+### Deployment
+
+* Frontend: Vercel
+* Backend: Render
+* Database: MongoDB Atlas
 
 ---
 
@@ -69,10 +91,12 @@ blog-platform/
 │   └── package.json
 │
 ├── frontend/
-│   ├── public/
 │   ├── src/
-│   ├── package.json
-│   └── ...
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.js
+│   └── package.json
 │
 └── README.md
 ```
@@ -81,92 +105,89 @@ blog-platform/
 
 ## Installation
 
-### Backend Setup
+### Clone the Repository
 
 ```bash
-cd blog-platform/backend
+git clone https://github.com/ashmika2103/blog-platform.git
+```
 
+### Backend
+
+```bash
+cd backend
 npm install
-
 npm start
 ```
 
-### Frontend Setup
+### Frontend
 
 ```bash
-cd blog-platform/frontend
-
+cd frontend
 npm install
-
 npm start
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+```
+PORT=5000
+MONGO_URI=mongodb+srv://ashmika:Ashmika12345@cluster0.usqajlj.mongodb.net/?appName=Cluster0
+JWT_SECRET=your_secret_key
 ```
 
 ---
 
 ## API Endpoints
 
-### User
+### Authentication
 
-| Method | Endpoint            |
-| ------ | ------------------- |
-| POST   | /api/users/register |
-| POST   | /api/users/login    |
+* POST `/api/users/register`
+* POST `/api/users/login`
 
 ### Posts
 
-| Method | Endpoint       |
-| ------ | -------------- |
-| GET    | /api/posts     |
-| GET    | /api/posts/:id |
-| POST   | /api/posts     |
-| PUT    | /api/posts/:id |
-| DELETE | /api/posts/:id |
+* GET `/api/posts`
+* POST `/api/posts`
+* PUT `/api/posts/:id`
+* DELETE `/api/posts/:id`
 
 ### Comments
 
-| Method | Endpoint              |
-| ------ | --------------------- |
-| POST   | /api/comments         |
-| GET    | /api/comments/:postId |
+* GET `/api/comments/:postId`
+* POST `/api/comments`
 
 ---
 
-## Deployment
+## Learning Outcomes
 
-### Frontend
+This project helped me learn:
 
-Vercel
-
-https://blog-platform-web-frontend.vercel.app
-
-### Backend
-
-Render
-
-https://blog-platform-oexy.onrender.com
-
-### Database
-
-MongoDB Atlas
+* MERN Stack Development
+* REST API Development
+* JWT Authentication
+* MongoDB Atlas Integration
+* CRUD Operations
+* Frontend & Backend Deployment
+* Git and GitHub Version Control
 
 ---
 
 ## Future Improvements
 
 * User Profile Page
-* Like and Share Posts
 * Search Blogs
-* Category-wise Blogs
+* Categories & Tags
+* Like & Share Posts
 * Rich Text Editor
-* Image Uploads
+* Image Upload
 * Dark Mode
-* Pagination
 
 ---
 
 ## Author
 
 **Ashmika K**
-
-
-
