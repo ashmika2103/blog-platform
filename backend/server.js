@@ -6,6 +6,11 @@ const connectDB = require("./config/db");
 
 // Load env variables
 dotenv.config();
+console.log("===== RENDER ENV =====");
+console.log("JWT_SECRET =", process.env.JWT_SECRET);
+console.log("PORT =", process.env.PORT);
+console.log("MONGO_URI =", process.env.MONGO_URI);
+
 console.log("Render JWT =", process.env.JWT_SECRET);
 console.log("JWT =", process.env.JWT_SECRET);
 console.log("MONGO =", process.env.MONGO_URI);
