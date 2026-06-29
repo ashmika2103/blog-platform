@@ -81,12 +81,6 @@ blog-platform/
 
 ## Installation
 
-### Clone Repository
-
-```bash
-git clone https://github.com/ashmika2103/blog-platform-web.git
-```
-
 ### Backend Setup
 
 ```bash
