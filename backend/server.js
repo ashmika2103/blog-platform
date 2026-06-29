@@ -4,15 +4,22 @@ const dotenv = require("dotenv");
 
 const connectDB = require("./config/db");
 
+// Load env variables
 dotenv.config();
 
-// Connect Database
+console.log("JWT =", process.env.JWT_SECRET);
+console.log("MONGO =", process.env.MONGO_URI);
+// Connect database
 connectDB();
 
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*", // later replace with Vercel URL
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -21,19 +28,17 @@ app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/posts", require("./routes/postRoutes"));
 app.use("/api/comments", require("./routes/commentRoutes"));
 
-// Default Route
+// Health check route
 app.get("/", (req, res) => {
-  res.send("Blog Platform API Running ");
+  res.send("Blog Platform API Running 🚀");
 });
 
-// Handle Invalid Routes
+// 404 handler
 app.use((req, res) => {
-  res.status(404).json({
-    message: "Route Not Found",
-  });
+  res.status(404).json({ message: "Route Not Found" });
 });
 
-// Start Server
+// Start server
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
