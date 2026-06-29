@@ -1,3 +1,22 @@
-PORT=5000
-MONGO_URI=mongodb://ashmika:Ashmika12345@ac-yq2fcck-shard-00-00.usqajlj.mongodb.net:27017,ac-yq2fcck-shard-00-01.usqajlj.mongodb.net:27017,ac-yq2fcck-shard-00-02.usqajlj.mongodb.net:27017/blogDB?ssl=true&replicaSet=atlas-vrmy40-shard-0&authSource=admin&retryWrites=true&w=majority
-JWT_SECRET=mysecretkey123
+# Dependencies
+node_modules/
+
+# Environment variables (VERY IMPORTANT)
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build files
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/

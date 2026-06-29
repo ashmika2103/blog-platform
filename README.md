@@ -174,8 +174,5 @@ MongoDB Atlas
 
 **Ashmika K**
 
----
 
-## License
 
-This project is developed for internship learning purposes.
